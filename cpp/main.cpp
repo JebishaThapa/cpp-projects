@@ -12,7 +12,7 @@ int main(){
     int z=129;
     int p=13;
     std::cout << "byebye " << (x + y - z)/p  << " hello" << std::endl;
-    std::cout << "Goodnightt!! i love you" << std::endl;
+    std::cout << "Goodnightt!!  you" << std::endl;
 //niaixa ma gako aaba variable lai kasari include garney gapp no 
 
 }
