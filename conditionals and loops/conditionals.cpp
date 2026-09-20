@@ -11,14 +11,13 @@ int main(){
         return 0;
     }
 
-    for (int i=2; i<=number; i++){
+    for (int i=2; i<number; i++){
         if (number % i == 0){
             std::cout << "The number is composite" << std::endl;
-            break;
-        }else{
-            std::cout << "the number is prime" <<std::endl;
+            return 0;
         }
     }
+    std::cout << "the number is prime" <<std::endl;
     return 0;
 
 }
