@@ -1,15 +1,8 @@
 #include <iostream>
 
-int arrSum(int arr[], int size){
-    int res{};
-    for (int i = 0; i< size; i++){
-        res += arr[i];
-    }
-    return res;
-}
 
 int main(){
-    int n{};
+    int n{}, res{};
     std::cin >> n;
     int arr[n];
 
@@ -17,8 +10,9 @@ int main(){
         int item{};
         std::cin >> item;
         arr[i] = item;
+        res+=arr[i];
     }
-    std::cout << arrSum(arr, n) << std::endl;
+    std::cout << res << std::endl;
     return 0;
     
 }
