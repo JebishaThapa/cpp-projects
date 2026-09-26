@@ -4,13 +4,15 @@
 int main(){
     std::string word;
     std::cin >> word;
-    int count=0;
-    for(char &i : word){
-        if(i == 'a' || i=='e'|| i == 'i'|| i =='o'|| i== 'u'){
-            count++;
-        }
+    std::string vow = "aeiou";
+    int count{};
+
+    for (char c : word){
+        if (vow.find(c) != std::string::npos) count++;
     }
-    std::cout << count;
+
+    std::cout << count << std::endl;
+
     return 0;
 
 }
