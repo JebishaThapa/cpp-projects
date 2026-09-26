@@ -7,13 +7,10 @@ int main(){
 
     int len{static_cast<int>(w.length())};
 
-    for(char &c : w){
-        if (c == w[len-1]){
-            w[0]=c;
-        }
-        if (c== w[0]){
-            w[len-1]==c;
-        }
+    if (len > 1){
+        char revised = w[0];
+        w[0]= w[len-1];
+        w[len-1]= revised;
     }
     std::cout << w;
     return 0;
