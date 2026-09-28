@@ -19,6 +19,7 @@ int main(){
     for(int i = len; i>= 1; i--){
       for (int j = 0; j < 26; j++){
         if(arr[j] )
+      
       }
     }
 
