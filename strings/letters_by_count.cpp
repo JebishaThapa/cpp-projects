@@ -14,13 +14,12 @@ int main(){
     arr[c - 'a']++;
   }
 
+  for(int i =1; i<=26; i++){
+    int k = 27 - i;
 
-  for(int i = 26; i>= 1; i--){
-    for (int j = 0; j < 26; j++){
+    for(int j = 0; j<26; j++){
       if(arr[j]==i){
-
         std::cout << static_cast<char>(j + 'a') << i;
-
       }
     }
   }
