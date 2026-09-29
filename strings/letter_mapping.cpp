@@ -1,49 +1,45 @@
 #include <iostream>
 #include <string>
-
 int main() {
-    std::string w{};
-    std::string s{};
-    std::cin >>w >> s;
+    std::string w1, w2;
+    std::cin >> w1 >> w2;
 
-    int arr1[26]{}, arr2[26]{};
-    int len1{static_cast<int>(w.length())};
-    int len2{static_cast<int>(s.length())};
+    int mapping1to2[26]{};
+    int mapping2to1[26]{};
 
-    for (char c: w){
-        arr1[c - 'a']++;
-    }
-    for (char c: w){
-        arr2[c- 'a']++;
-    }
-
-   
-    if (len1!=len2){
+    if(w1.length()!=w2.length()) {
         std::cout << "NO";
         return 0;
     }
 
-    int map1to2[]{};
-    int map2to1[]{};
+    for (size_t i=0; i<w1.length(); i++){
+        int index = w1[i] - 'a';
 
-    for (int i=0; i<len1; i++){
-        map1to2[w[i]] = s[i];
-        if(map1to2[w[i]]!= s[i]){
-            std::cout << "no";
+        char target= w2[i];
 
+        if (mapping1to2[index]==0){
+            mapping1to2[index]= target;
         }
-        
-    }
-
-    for (int i = 0; i<len2; i++){
-        map2to1[s[i]] = w[i];
-        if(map2to1[s[i]!= w[i]]){
-            std::cout << "noo";
+        else if (mapping1to2[index]!=target){
+            std::cout << "NO";
+            return 0;
         }
     }
+    for (size_t i=0; i<w1.length(); i++){
+        int index = w2[i] - 'a';
 
-  
-   
+        char target= w1[i];
+
+        if (mapping2to1[index]==0){
+            mapping2to1[index]= target;
+        }
+        else if (mapping2to1[index]!=target){
+            std::cout << "NO";
+            return 0;
+        }
+    }
+    std::cout << "YES";
+
 
     return 0;
 }
