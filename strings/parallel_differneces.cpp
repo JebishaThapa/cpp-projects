@@ -7,18 +7,21 @@ int main() {
 
     int len1{static_cast<int>(w1.length())};
 
-    bool hasDiff = false;
+    bool firstDiff = true;
 
     for (int i = 0; i< len1; i++){
         if (w1[i] != w2[i]){
+            if (!firstDiff){
+                std::cout << " ";
+            }
             
-            std::cout << ( i+1) << " ";
-            
-            hasDiff = true;
+            std::cout << ( i+1);
+            firstDiff = false;
         }
     }
     
-    if(!hasDiff) std::cout << "SAME" << std::endl;
+    if(firstDiff) std::cout << "SAME" << std::endl;
+    else std::cout << "\n";
    
 
     return 0;

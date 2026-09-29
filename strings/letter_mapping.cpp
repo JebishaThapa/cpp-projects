@@ -23,11 +23,26 @@ int main() {
         return 0;
     }
 
-    for(int i=0; i<len1; i++){
-        char charW = w[i];
-        char charS = s[i];
+    int map1to2[]{};
+    int map2to1[]{};
+
+    for (int i=0; i<len1; i++){
+        map1to2[w[i]] = s[i];
+        if(map1to2[w[i]]!= s[i]){
+            std::cout << "no";
+
+        }
+        
     }
 
+    for (int i = 0; i<len2; i++){
+        map2to1[s[i]] = w[i];
+        if(map2to1[s[i]!= w[i]]){
+            std::cout << "noo";
+        }
+    }
+
+  
    
 
     return 0;
