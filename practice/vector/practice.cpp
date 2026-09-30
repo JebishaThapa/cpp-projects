@@ -3,8 +3,12 @@
 using namespace std;
 
 int main() {
-   vector<int> v1 ={1,2,3,4};
 
-   for(int i = 0; i <v1.size(); i++)
+    std::vector<int> v;
+    v[0]= 5;
+    std::cout << v[0];
+
+
+   
     return 0;
 }
