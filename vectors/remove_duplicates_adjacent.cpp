@@ -38,3 +38,16 @@ int main() {
     
     return 0;
 }
+/*
+#include <iostream>
+#include <vector>
+
+int main(){
+    
+    int n;
+    if(!(!std::cin >> n))
+    return 
+
+}
+
+*/
