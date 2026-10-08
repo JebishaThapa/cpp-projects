@@ -14,15 +14,15 @@ int main() {
 
     v.push_back(0);
 
-    while (n >0 && v[n-1] > x){
-        v[n] = v[n-1];
-        n--;
+    int i = n;
+
+    while (i >0 && v[i - 1] > x){
+        v[i] = v[i-1];
+        i--;
     }
 
-
-   
-
-
+    v[i] = x;
+    
     for (size_t j = 0; j < v.size(); j++) {
         std::cout << v[j];
         if (j < v.size() - 1) {
