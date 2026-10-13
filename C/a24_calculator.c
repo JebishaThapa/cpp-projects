@@ -5,6 +5,8 @@ int main(){
     int a,b,result;
     printf("Enter two numbers: ");
     scanf("%d%d", &a, &b);
+    int c;
+    while((c = getchar()) != '\n' && c != EOF);
 
     printf("Enter an operator(+, -, *): ");
     scanf("%c",&operator);
