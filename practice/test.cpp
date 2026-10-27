@@ -1,9 +1,7 @@
 #include <iostream>
+#include <utility>
 #include <string>
-#include <cctype>
 
-int main(){
-    
-    
-    return 0;
+int getScore(std::pair<std::string, int> student){
+    return student.second;
 }
